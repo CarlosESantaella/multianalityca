@@ -1,0 +1,93 @@
+# WordPress - archivos sensibles
+wp-config.php
+wp-config-sample.php
+.htaccess
+.user.ini
+php.ini
+
+# Backups de configuración
+.htaccess.bak.*
+.htaccess.php-upgrade-backup
+.htaccess.phpupgrader.*
+
+# Dumps de base de datos
+*.sql
+*.sql.gz
+*.sql.zip
+
+# Uploads de usuarios (medios)
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/cache/
+wp-content/wflogs/
+
+# Plugins de seguridad/cache - logs
+wp-content/plugins/*/cache/
+wp-content/plugins/wp-rocket/
+wp-content/plugins/litespeed-cache/
+wp-content/plugins/updraftplus/
+
+# Logs
+*.log
+debug.log
+error_log
+error_log*
+error.log
+
+# Archivos zip / comprimidos grandes
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Backups WordPress comprimidos
+wp.zip
+wp-content/wp-content-*.zip
+.smileys.zip
+.smileys/
+
+# Otros archivos grandes
+Multianallityca.xlsx
+wp-cli.phar
+NUL
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node / build
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Composer
+vendor/
+
+# Credenciales y secretos
+*.env
+.env.*
+*credentials*
+*secret*
+RSSSL_KEY*
+
+# Caché y temporales
+*.tmp
+*.temp
+.cache/
+
+# Específicos del proyecto
+multiana.sql
+multiana*.sql

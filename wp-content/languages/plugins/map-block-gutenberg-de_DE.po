@@ -1,0 +1,96 @@
+# Translation of Plugins - Map Block for Google Maps - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Map Block for Google Maps - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-02-18 19:48:06+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Map Block for Google Maps - Stable (latest release)\n"
+
+#. Plugin Name of the plugin
+msgid "Map Block for Google Maps"
+msgstr "Map Block for Google Maps"
+
+#: map-block-gutenberg.php:136
+msgid "Google Console"
+msgstr "Google Console"
+
+#: map-block-gutenberg.php:134
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+#: map-block-gutenberg.php:131
+msgid "Address"
+msgstr "Adresse"
+
+#: map-block-gutenberg.php:129
+msgid "map"
+msgstr "Karte"
+
+#: map-block-gutenberg.php:128
+msgid "Map"
+msgstr "Karte"
+
+#: map-block-gutenberg.php:133
+msgid "Height"
+msgstr "Höhe"
+
+#: map-block-gutenberg.php:132
+msgid "Zoom"
+msgstr "Zoom"
+
+#: map-block-gutenberg.php:135
+msgid "Please create your own API key on the"
+msgstr "Bitte erstelle deinen API-Schlüssel in der"
+
+#: map-block-gutenberg.php:127
+msgid "Simple yet powerful map block powered by Google Maps."
+msgstr "Einfacher und dennoch mächtiger Karten-Block für Google Maps."
+
+#: map-block-gutenberg.php:130
+msgid "location"
+msgstr "Standort"
+
+#: map-block-gutenberg.php:137
+msgid "This is a requirement enforced by Google."
+msgstr "Die Anforderung wird von Google vorgeschrieben."
+
+#. Author URI of the plugin
+msgid "https://www.webfactoryltd.com/"
+msgstr "https://www.webfactoryltd.com/"
+
+#. Author of the plugin
+msgid "WebFactory Ltd"
+msgstr "WebFactory Ltd"
+
+#: map-block-gutenberg.php:89
+msgid "Create with Gutenberg"
+msgstr "Mit Gutenberg erstellen"
+
+#: map-block-gutenberg.php:100
+msgid "Support"
+msgstr "Support"
+
+#: map-block-gutenberg.php:100
+msgid "Problems? We are here to help!"
+msgstr "Probleme? Wir sind hier, um zu helfen!"
+
+#: map-block-gutenberg.php:101
+msgid "If you like it, please review the plugin"
+msgstr "Falls es dir gefällt, hinterlasse bitte eine Plugin-Bewertung"
+
+#: map-block-gutenberg.php:101
+msgid "Review the plugin"
+msgstr "Das Plugin bewerten"
+
+#. Description of the plugin
+msgid "Simple, no-nonsense map block powered by Google Maps for Gutenberg editor."
+msgstr "Simpler Google-Maps-Block für den Gutenberg-Editor ohne überflüssigen Schnickschnack."
+
+#: map-block-gutenberg.php:89
+msgid "Create a new page using the Gutenberg editor"
+msgstr "Erstelle eine neue Seite mit dem Gutenberg-Editor"

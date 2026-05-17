@@ -1,0 +1,32 @@
+# Translation of Plugins - Simple Map No Api - Development (trunk) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Simple Map No Api - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-29 03:58:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Simple Map No Api - Development (trunk)\n"
+
+#. Author URI of the plugin
+msgid "https://www.mashi-zone.com/"
+msgstr "https://www.mashi-zone.com/"
+
+#. Author of the plugin
+msgid "Syed Mashiur Rahman"
+msgstr "Syed Mashiur Rahman"
+
+#. Description of the plugin
+msgid "Simple Google map that doesn't require google map api."
+msgstr "Sencillo mapa de Google que no necesita la API de Google Maps."
+
+#. Plugin URI of the plugin
+msgid "https://github.com/syedshaon/simpleMapNoApi"
+msgstr "https://github.com/syedshaon/simpleMapNoApi"
+
+#. Plugin Name of the plugin
+msgid "Simple Map No Api"
+msgstr "Simple Map No Api"

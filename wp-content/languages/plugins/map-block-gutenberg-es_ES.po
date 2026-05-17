@@ -1,0 +1,104 @@
+# Translation of Plugins - Gutenberg Map Block for Google Maps - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Gutenberg Map Block for Google Maps - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-08 12:23:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Gutenberg Map Block for Google Maps - Stable (latest release)\n"
+
+#: map-block-gutenberg.php:168
+msgid "Install the <a href=\"%s\" target=\"_blank\">Gutenberg plugin</a> or update your WordPress core and this notice will go away."
+msgstr "Instala el <a href=\"%s\" target=\"_blank\">plugin Gutenberg</a> o actualiza tu WordPress y este aviso desaparecerá."
+
+#: map-block-gutenberg.php:167
+msgid "Map Block for Google Maps requires the Gutenberg plugin to work. It is after all a block for Gutenberg."
+msgstr "Map Block for Google Maps requiere el plugin Gutenberg para funcionar. A fin de cuentas es un bloque para Gutenberg."
+
+#. Plugin Name of the plugin
+msgid "Map Block for Google Maps"
+msgstr "Map Block for Google Maps"
+
+#: map-block-gutenberg.php:137
+msgid "This is a requirement enforced by Google."
+msgstr "Este requisito lo exige Google."
+
+#: map-block-gutenberg.php:136
+msgid "Google Console"
+msgstr "Consola de Google"
+
+#: map-block-gutenberg.php:135
+msgid "Please create your own API key on the"
+msgstr "Por favor, crea tu clave API en la"
+
+#: map-block-gutenberg.php:134
+msgid "API Key"
+msgstr "Clave de la API"
+
+#: map-block-gutenberg.php:133
+msgid "Height"
+msgstr "Altura"
+
+#: map-block-gutenberg.php:132
+msgid "Zoom"
+msgstr "Zoom"
+
+#: map-block-gutenberg.php:131
+msgid "Address"
+msgstr "Dirección"
+
+#: map-block-gutenberg.php:130
+msgid "location"
+msgstr "ubicación"
+
+#: map-block-gutenberg.php:129
+msgid "map"
+msgstr "mapa"
+
+#: map-block-gutenberg.php:128
+msgid "Map"
+msgstr "Mapa"
+
+#: map-block-gutenberg.php:127
+msgid "Simple yet powerful map block powered by Google Maps."
+msgstr "Simple pero potente bloque de mapas de Google Maps."
+
+#. Author URI of the plugin
+msgid "https://www.webfactoryltd.com/"
+msgstr "https://www.webfactoryltd.com/"
+
+#. Author of the plugin
+msgid "WebFactory Ltd"
+msgstr "WebFactory Ltd"
+
+#. Description of the plugin
+msgid "Simple, no-nonsense map block powered by Google Maps for Gutenberg editor."
+msgstr "Bloque de mapas sencillo, sin tonterías, para Google Maps para el editor Gutenberg."
+
+#: map-block-gutenberg.php:101
+msgid "Review the plugin"
+msgstr "Valora el plugin"
+
+#: map-block-gutenberg.php:101
+msgid "If you like it, please review the plugin"
+msgstr "Si te gusta, por favor valora el plugin"
+
+#: map-block-gutenberg.php:100
+msgid "Support"
+msgstr "Soporte"
+
+#: map-block-gutenberg.php:100
+msgid "Problems? We are here to help!"
+msgstr "¿Problemas? ¡Estamos aquí para ayudar!"
+
+#: map-block-gutenberg.php:89
+msgid "Create with Gutenberg"
+msgstr "Crea con Gutenberg"
+
+#: map-block-gutenberg.php:89
+msgid "Create a new page using the Gutenberg editor"
+msgstr "Crea una nueva página usando el editor de Gutenberg."

@@ -1,0 +1,74 @@
+/*
+Theme Name: Avada Child
+Description: Child theme for Avada theme
+Author: ThemeFusion
+Author URI: https://theme-fusion.com
+Template: Avada
+Version: 1.0.0
+Text Domain:  Avada
+*/
+
+/* ==========================================================================
+   Corrección: Header sticky y espaciado del hero en página de inicio
+   ========================================================================== */
+
+/*
+ * Problema: El header sticky de Avada tiene position:fixed,
+ * lo que hace que el contenido quede detrás del header.
+ * Solución: Agregar padding-top al contenido principal en el home.
+ */
+
+/* Página de inicio con header sticky - agregar espacio para el hero */
+body.home #main,
+body.page-template-default.home #main,
+body.home.avada-has-sticky-header-enabled #main {
+    padding-top: 100px; /* Altura del header - ajustar según tu configuración */
+}
+
+/* Si usas slider de Avada en el home */
+body.home #sliders-container,
+body.home .fusion-slider-container,
+body.home .tfs-slider {
+    margin-top: 0;
+}
+
+/* Si usas Elementor para el hero en el home */
+body.home #main > .elementor:first-child,
+body.home #main > .elementor-section:first-child,
+body.home .elementor-location-single > .elementor-section-wrap > .elementor-section:first-child {
+    padding-top: 100px;
+}
+
+/* Si usas Fusion Builder para el hero en el home */
+body.home #main > .fusion-fullwidth:first-child {
+    padding-top: 100px;
+}
+
+/* ALTERNATIVA: Si el hero debe ir DETRÁS del header transparente */
+/* Descomenta estas líneas si prefieres que el hero empiece desde arriba */
+/*
+body.home #main {
+    padding-top: 0 !important;
+}
+body.home #main > .fusion-fullwidth:first-child,
+body.home #main > .elementor:first-child {
+    padding-top: 0 !important;
+}
+*/
+
+/* Responsive: ajuste para móviles */
+@media only screen and (max-width: 800px) {
+    body.home #main,
+    body.home #main > .elementor:first-child,
+    body.home #main > .fusion-fullwidth:first-child {
+        padding-top: 70px; /* Header móvil es más pequeño */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.home #main,
+    body.home #main > .elementor:first-child,
+    body.home #main > .fusion-fullwidth:first-child {
+        padding-top: 60px;
+    }
+}

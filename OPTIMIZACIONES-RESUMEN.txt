@@ -1,0 +1,201 @@
+=====================================================
+RESUMEN DE OPTIMIZACIONES - MultiAnalityca
+Fecha: 31 de Enero 2026 (Actualizado)
+=====================================================
+
+## SEGUNDA RONDA DE OPTIMIZACIONES (Agresivas)
+
+### Base de datos limpiada:
+- 157 acciones completadas del Action Scheduler eliminadas
+- 23 acciones fallidas eliminadas
+- 541 logs huérfanos eliminados
+- 15 postmeta huérfanos eliminados
+- 77 termmeta huérfanos eliminados
+- 9 transients expirados eliminados
+- Todas las tablas optimizadas
+
+### Nuevas optimizaciones en functions.php (#56-#75):
+- #56: Optimizar Jetpack - Desactivar módulos pesados
+- #57: Descargar Jetpack CSS/JS en frontend
+- #58: HubSpot/LeadIn solo en páginas específicas
+- #59: Google Site Kit optimizado
+- #60: MonsterInsights en modo lite
+- #61: Tracking condicional (no en páginas legales)
+- #62: Avada theme - Desactivar features no usados
+- #63: Defer agresivo de scripts de terceros
+- #64: Optimizar consultas de postmeta
+- #65: Limpieza diaria agresiva de BD
+- #66-68: Optimizaciones adicionales de cron/heartbeat
+- #69: Preload recursos críticos de Avada
+- #70: Resolver conflicto Yoast + AIOSEO
+- #71: Fusion Builder condicional
+- #72: Critical CSS de Avada inline
+- #73: Lazy load de YouTube con facades
+- #74: Lazy load de Google Maps
+- #75: Limpieza inicial automática
+
+### WP Rocket optimizado:
+- Preload habilitado
+- Sitemap preload habilitado
+- DNS Prefetch configurado
+- Preload fonts habilitado
+
+=====================================================
+## PRIMERA RONDA DE OPTIMIZACIONES
+=====================================================
+
+## CAMBIOS REALIZADOS
+
+### 1. wp-config.php - Optimizaciones de memoria y rendimiento
+
+AGREGADAS:
+- WP_MEMORY_LIMIT = 512M (aumento de memoria para frontend)
+- WP_MAX_MEMORY_LIMIT = 1024M (aumento de memoria para admin)
+- DISABLE_WP_CRON = true (usar cron del servidor)
+- COMPRESS_SCRIPTS = true (comprimir scripts JS)
+- COMPRESS_CSS = true (comprimir CSS)
+- CONCATENATE_SCRIPTS = false (evitar problemas de plugins)
+- AUTOSAVE_INTERVAL = 300 (autosave cada 5 minutos)
+- WP_POST_REVISIONS = 5 (limitar revisiones)
+- DISALLOW_FILE_EDIT = true (seguridad - deshabilitar editor)
+- Habilitadas configuraciones de Really Simple SSL (cookies seguras)
+
+
+### 2. .user.ini - Optimizaciones de PHP
+
+MODIFICADAS:
+- memory_limit: 256M -> 512M
+- max_execution_time: 30 -> 120 segundos
+- max_input_vars: 1000 -> 5000
+- realpath_cache_size: 16K -> 256K (NUEVO)
+- realpath_cache_ttl: 120 -> 3600 (NUEVO)
+
+
+### 3. .htaccess - Soporte WebP automático
+
+AGREGADO:
+- Reescritura automática de JPG/PNG a WebP si existe versión WebP
+- Verificación de soporte del navegador para WebP
+- Cabeceras Vary para caching correcto con proxies
+- Tipo MIME correcto para archivos WebP
+
+
+### 4. functions.php - 11 nuevas optimizaciones (45-55)
+
+AGREGADAS:
+#45. Conversión automática de imágenes a WebP al subir
+#46. Servir imágenes WebP automáticamente si existen
+#47. Caché de consultas pesadas de WordPress
+#48. Deshabilitar pingbacks completamente
+#49. Optimizar wp_options autoload
+#50. Speculation Rules API (prefetch/prerender moderno)
+#51. Restricción de REST API para seguridad
+#52. Limitar revisiones por tipo de contenido
+#53. Optimizar consultas de términos/taxonomías
+#54. DNS Prefetch para recursos de terceros adicionales
+#55. Caché estático de menús de navegación
+
+
+=====================================================
+CONFIGURACION REQUERIDA - CRON DEL SERVIDOR
+=====================================================
+
+Dado que WP-Cron ha sido deshabilitado (DISABLE_WP_CRON = true),
+es necesario configurar un cron job del servidor para ejecutar
+las tareas programadas de WordPress.
+
+## Para Laragon (Windows) - Programador de tareas:
+
+1. Abrir "Programador de tareas" de Windows
+2. Crear nueva tarea:
+   - Nombre: "WordPress Cron - MultiAnalityca"
+   - Desencadenador: Cada 5 minutos
+   - Acción: Iniciar programa
+     - Programa: C:\laragon\bin\php\php-8.3.x\php.exe
+     - Argumentos: C:\laragon\www\multianalityca\wp-cron.php
+     - Iniciar en: C:\laragon\www\multianalityca
+
+## Para cPanel (Producción):
+
+1. Ir a cPanel > Cron Jobs
+2. Agregar nuevo cron:
+   - Tiempo: */5 * * * * (cada 5 minutos)
+   - Comando: /usr/local/bin/php /home/usuario/public_html/wp-cron.php
+
+## Alternativamente con wget/curl:
+
+*/5 * * * * wget -q -O - https://multianalityca.com/wp-cron.php?doing_wp_cron >/dev/null 2>&1
+
+## O con curl:
+
+*/5 * * * * curl -s https://multianalityca.com/wp-cron.php?doing_wp_cron >/dev/null 2>&1
+
+
+=====================================================
+IMPACTO ESPERADO
+=====================================================
+
+Las optimizaciones implementadas deberían proporcionar:
+
+1. VELOCIDAD DE CARGA: 30-50% mejora
+   - Imágenes WebP (30-50% más pequeñas que JPEG/PNG)
+   - Mejor caché de navegador y servidor
+   - Prefetch inteligente de páginas
+
+2. REDUCCION DE RECURSOS:
+   - Menos consultas a la base de datos
+   - Mejor uso de memoria PHP
+   - WP-Cron no consume recursos en cada visita
+
+3. MEJOR SEGURIDAD:
+   - REST API restringida
+   - Pingbacks deshabilitados
+   - Editor de archivos deshabilitado
+
+4. CORE WEB VITALS:
+   - LCP mejorado (imágenes WebP + preload)
+   - FID/INP mejorado (delay JS execution)
+   - CLS mejorado (dimensiones de imágenes)
+
+
+=====================================================
+NOTAS IMPORTANTES
+=====================================================
+
+1. CONVERSIÓN WEBP: Las imágenes existentes NO se convierten
+   automáticamente. Solo las nuevas imágenes subidas se
+   convertirán a WebP. Para convertir imágenes existentes,
+   usar un plugin como ShortPixel o Imagify.
+
+2. CACHE: Después de estos cambios, limpiar todos los caches:
+   - WP Rocket: Admin > WP Rocket > Clear Cache
+   - LiteSpeed: Admin > LiteSpeed Cache > Purge All
+   - Navegador: Ctrl+Shift+R
+
+3. TESTING: Verificar el sitio funciona correctamente después
+   de los cambios. Si hay problemas, revisar el archivo
+   wp-content/debug.log (si WP_DEBUG está habilitado).
+
+4. CRON: IMPORTANTE - Configurar el cron del servidor según
+   las instrucciones anteriores para que las tareas programadas
+   (emails, optimización de base de datos, actualizaciones)
+   sigan funcionando correctamente.
+
+
+=====================================================
+OPTIMIZACIONES EXISTENTES (ya implementadas antes)
+=====================================================
+
+El sitio ya tenía implementadas 44 optimizaciones incluyendo:
+- Compresión Brotli + Gzip
+- Cache headers agresivos (1 año para assets)
+- WP Rocket configurado con RUCSS y Delay JS
+- Lazy loading de imágenes
+- Critical CSS inline
+- Deshabilitar emojis, embeds, Gutenberg CSS
+- Schema markup SEO (MedicalBusiness)
+- Bot protection con rate limiting de 404
+- Optimización de base de datos semanal
+- Y muchas más...
+
+TOTAL DE OPTIMIZACIONES: 55+
